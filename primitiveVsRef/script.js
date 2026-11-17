@@ -42,12 +42,30 @@
 //  console.log({ a: 1 } === { a: 1 });
 
 //! Spread Operator => " ... " -. reference ki saari VALUES ko copy karna.
-let obj1 = {
-  name: "Arun",
-  age: 78,
-};
+// let obj1 = {
+//   name: "Arun",
+//   age: 78,
+// };
 
-let obj2 = { ...obj1 };
-obj2.name = "Vishal";
-console.log(obj1);
-console.log(obj2);
+// let obj2 = { ...obj1 };
+// obj2.name = "Vishal";
+// console.log(obj1);
+// console.log(obj2);
+
+//! shallow copy -> Level 1 copy
+
+// let obj1 = {
+//   name: "Arun",
+//   age: 78,
+//   address: {
+//     street: "Times",
+//     city: "Bhadwapur",
+//   },
+// };
+
+// let obj2 = { ...obj1 };
+// obj2.name = "rancho";
+// obj2.address.street = "paglapur";
+
+// console.log(obj1);
+// console.log(obj2);
