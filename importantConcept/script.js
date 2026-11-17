@@ -87,7 +87,8 @@
 // jitne functions hong aur tum unhe call karoge to utni baar GEC ke andr EC(execution context) banega.
 
 //* normal code will execute in GEC
-//* function block will executes inside GEC in EC bloc, & when function will executed, then the EC will destroy.
+
+//* functional block will executes inside GEC in EC block, & when function will executed, then the EC will destroy.
 
 //!EC -> it will runs in two phases
 
