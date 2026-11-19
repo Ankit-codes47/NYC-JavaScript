@@ -30,7 +30,7 @@
 //! Promises and Promise handlers
 //* promise is an object that acts as a placeholder for a value that will be available in the future an asynchronous task is complete.
 
-console.log("Promises");
+// console.log("Promises");
 
 //? resolve
 // let data = new Promise((resolve, reject) => {
@@ -49,17 +49,17 @@ console.log("Promises");
 // console.log(data);
 
 //? resolve
-let data = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    let party = true;
+// let data = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     let party = true;
 
-    if (party) {
-      return resolve({ isParty: true, venue: "hotel Taj" });
-    }
-    reject("paise nhi hai");
-  }, 2000);
-});
-console.log(data);
+//     if (party) {
+//       return resolve({ isParty: true, venue: "hotel Taj" });
+//     }
+//     reject("paise nhi hai");
+//   }, 2000);
+// });
+// console.log(data);
 
 //! Promise is a synchronous code
 //! Promise handlers-----
@@ -76,8 +76,24 @@ console.log(data);
 //   });
 
 //* Async wait
-async function promiseResolve() {
-    let response = await data;
-}
+// async function promiseResolve() {
+//   try {
+//     let response = await data;
+//     console.log(data);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
 
-promiseResolve();
+// promiseResolve();
+
+// let resolver = async () => {
+//   try {
+//     let response = await data;
+//     console.log(response);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
+
+// resolver();
