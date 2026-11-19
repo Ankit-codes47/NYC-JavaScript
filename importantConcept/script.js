@@ -102,4 +102,108 @@
 // test();
 // console.log(temp);
 
+//! TDZ = Temperal Dead Zone
 
+//! closures -> a closure is a function that remembers and can access variables from its outer(parent) scope, even after the outer function has finished executing.
+
+// const outer = () => {
+//   console.log("outer executed and removed from callstack");
+
+//   let number = 89;
+//   let inner = () => {
+//     console.log("i m inner fn", number);
+//     let rest = () => {
+//       console.log("number->", number);
+//       return rest;
+//     };
+//   };
+//   return inner;
+// };
+// let nestedFn = outer();
+// let fn = nestedFn();
+// fn();
+// outer()();
+
+// let counter = () => {
+//   let count = 0;
+
+//   return () => {
+//     count++;
+//     console.log(count);
+//   };
+// };
+
+// let c1 = counter();
+
+// c1();
+// c1();
+// c1();
+// c1();
+// c1();
+// c1();
+
+//! twist
+// for (let i = 1; i <= 4; i++) {
+//   setTimeout(() => {
+//     console.log(i);
+//   }, 5000);
+// };
+
+// function outer() {
+//   let count = 0;
+//   return function () {
+//     count++;
+//     return count;
+//   };
+// }
+// const c = outer();
+// c();
+// console.log(c());
+
+// let sum = (a) => {
+//   console.log("mila", a);
+//   return sum;
+// };
+
+// let result = sum(12)(78);
+// console.log(result);
+
+// infinite currying function
+// let sum = (a) => {
+//   return (b) => {
+//     console.log("b is", b);
+//     if(b !== undefined){
+//         return sum(a + b);
+//     }
+//     return a;
+//   };
+// };
+
+// let result = sum(12)(78)();
+// console.log(result);
+
+//!code snippet
+//*Q1-------------------
+// function f() {
+//     let x = 10;
+//     return () => console.log(x++);
+// }
+
+// const a = f();
+// a();
+// a();
+
+//*Q2-------------------
+// const arr = [];
+// for (var i = 0; i < 3; i++) arr.push(() => i);
+// console.log(arr.map((fn) => fn()));
+
+//*Q3-------------------
+// const arr = [];
+// for (let i = 0; i < 3; i++) arr.push(() => i);
+// console.log(arr.map((fn) => fn()));
+
+//*Q4-------------------
+// const add = (a) => (b) => a + b;
+// const add5 = add(5);
+// console.log(add5(3), add5(10));
