@@ -63,8 +63,8 @@
 
 //! Promise is a synchronous code
 //! Promise handlers-----
-// 1. then() -> hamesha resolve ko accept karega
-// 2. catch() -> hamesha error ko accept karega
+// 1. then()-> hamesha resolve ko accept karega
+// 2. catch()-> hamesha error ko accept karega
 // 3. async await -> will only works with functions.
 
 // data
@@ -97,3 +97,61 @@
 // };
 
 // resolver();
+
+//! microtaskQueue -> highest priority
+// .then()
+// .catch()
+// .finally()
+
+//! macrotaskQueue
+// setTimeout
+// I/O callback
+// onclick
+
+//! After each task, execute all microtasks in the microtask Queue
+
+// call stack <- event loop <->microtask queue
+//                  ^
+// call stack <- event loop <->macrotask queue
+
+// console.log("1");
+// setTimeout(() => console.log("2"), 0);
+// Promise.resolve().then(() => console.log("3"));
+// console.log("4");
+
+//! localStorage
+
+// let usersData = [
+//   {
+//     name: "pinky",
+//     age: 15,
+//   },
+//   {
+//     name: "raghav",
+//     age: 20,
+//   },
+// ];
+
+//! set data
+// localStorage.setItem("name", "virat kohli");
+
+// localStorage.setItem("usersData", JSON.stringify(usersData));
+
+//! getData
+// let lsd = localStorage.getItem("usersData");
+
+// let ori = JSON.parse(lsd);
+// console.log(ori);
+
+// localStorage.removeItem("name");
+
+// localStorage.setItem("age", 20);
+// console.log(typeof localStorage.getItem("age"));
+
+//! JSON -> Javascript object notation
+
+// ! Fetch
+// Fetch ek built-in Javascript API hai jiska use hum server ko http request bhejne aur server se response lene ke liye karte hain.
+
+// Fetch-> request demands and response get ! API call
+
