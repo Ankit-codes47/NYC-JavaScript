@@ -155,3 +155,27 @@
 
 // Fetch-> request demands and response get ! API call
 
+// let response = fetch("https://fakestoreapi.com/products");
+
+// response.then((val) => console.log(val)).catch((error) => console.log(error));
+// console.log(response);
+
+// let data = fetch("https://fakestoreapi.com/products");
+
+// data.then((val) => val.json()).then((val) => console.log(val));
+
+// Fetch -> 2 times me hame resolve milega
+//Fetch -> API call -> kuch time lagega -> promise -> handle
+
+// //! async await
+// let resolve = async () => {
+//   try {
+//     let res = await data;
+//     let result = await res.json();
+//     console.log(result);
+//   } catch (error) {
+//     console.log("error in api", error);
+//   }
+// };
+// resolve();
+
