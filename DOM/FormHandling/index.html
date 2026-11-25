@@ -1,12 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style">
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Form handling</h1>
+    <form>
+      <fieldset>
+        <legend>Personal details</legend>
+        <div>
+          <label for="">Name</label>
+          <input type="text" placeholder="john doe" />
+        </div>
+        <br />
+        <div>
+          <label for="">Email</label>
+          <input type="email" placeholder="xyz@gmail.com" />
+        </div>
+        <br />
+        <div>
+          <label for="">Mobile</label>
+          <input type="number" placeholder="+91 9999999999" />
+        </div>
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>Address details</legend>
+        <div>
+          <label for="">Street</label>
+          <input type="text" placeholder="Shanti Kunj street" />
+        </div>
+        <br />
+        <div>
+          <label for="">Delhi</label>
+          <input type="text" placeholder="Delhi" />
+        </div>
+        <br />
+      </fieldset>
+      <br />
+      <button>Submit</button>
+    </form>
+    <script src="script.js"></script>
+  </body>
 </html>
